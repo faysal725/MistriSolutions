@@ -3,4 +3,5 @@
 
 Live Link: https://mistri-solutions.vercel.app/
 
-#Technology used
+##Technology used
+Vue Js, Firebase Authentication
