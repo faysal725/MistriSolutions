@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mistri Solution</title>
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon-2019-03-20-5c91de9936562.png">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="vue-app" class='login-page'>
+
+        <div class='companyName'>
+            <h1 class='sideHeading'>Mistri Solutions  </h1>
+            <h5 class='sideDescription'>Make yourself digitalized &amp; more effecient </h5>
+            <a class='sideReturn' href="/"><img src="./images/Vector 1.svg" alt="" /></a>
+        </div>
+
+        <div class='sidebarSection'>
+            <div class='sidebar'>
+                <h1 class='sideHeading'>Mistri Solutions  </h1>
+                <h5 class='sideDescription'>Make yourself digitalized &amp; more effecient </h5>
+                <a class='sideReturn' href="/"><img src="./images/Vector 1.svg" alt="" /></a>
+            </div>
+        </div>
+        
+
+        <div class='form-section'>
+            <div class="form">
+
+                <form class="login-form">
+                    <h1>Welcome</h1>
+                    <h4>Log In</h4>
+                    <input type="text" placeholder="email" v-model="email"/>
+                    <input type="password" placeholder="password" class="hidden" v-model="password"/>
+                    <span  v-on:click="loginEyeToggle" id="toggleEye" class='togglePass' >
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </span>
+                    <button class="login-submit">login</button>
+                    <p>New User!! Please <span  v-on:click="toggleLogIn">Sign in</span></p>
+                </form>
+
+                <form id="sign-in" class="login-form">
+                    <h1>Welcome</h1>
+                    <h4>Sign In</h4>
+                    <input type="text" placeholder="name" v-model="name"/>
+                    <input type="text" placeholder="email" v-model="email"/>
+                    <input type="password" placeholder="password" class="hidden2" v-model="password"/>
+                    <span v-on:click="signEyeToggle" id="toggleEye2" class='togglePass' onclick="signEyeToggle()">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </span>
+                    <button class="signin-submit">Sign In</button>
+                    <p>New User!! Please <span v-on:click="toggleSignIn">Log in</span></p>
+                </form>
+                
+            </div>
+            <footer>Mistri Solution</footer>
+        </div>
+    </div>
+
+
+    <script src="./user.json"></script>
+
+
+    <script src="./app.js"></script>
+    <script src="./firebase.js" type="module"></script>
+</body>
+
+</html>
